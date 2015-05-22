@@ -10,6 +10,8 @@ var _ = require('lodash'),
   onExit = require('signal-exit'),
   stripBom = require('strip-bom')
 
+instrumenter.opts.preserveComments = true;
+
 function NYC (opts) {
   _.extend(this, {
     subprocessBin: path.resolve(
